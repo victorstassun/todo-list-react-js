@@ -1,0 +1,136 @@
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .main-page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .lists-container {
+            display: flex;
+            margin: 20px 0;
+            height: 100vh;
+
+            .list-container {
+                width: 340px;
+                height: 70%;
+                margin: 16px;
+                display: flex;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.17);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+
+                .list-header {
+                    width: 100%;
+                    justify-content: center;
+                    text-align: center;
+                    height: 56px;
+
+                    p {
+                        font-size: 1em;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 320px;
+                        height: 2px;
+                        background: #fff;
+                        margin: -12px 0 0 -160px;
+                    }
+                }
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 20px;
+                    height: calc(95% - 56px);
+                    overflow: scroll;
+                    overflow-x: hidden;
+
+                    .list-item-container {
+                        display: flex;
+                        width: 280px;
+                        height: 82px;
+                        border-radius: 4px;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        margin-bottom: 12px;
+
+                        .badge-container {
+                            width: 5%;
+
+                            .status {
+                                width: 6px;
+                                height: 82px;
+                                border-radius: 4px 0 0 4px;
+                            }
+
+                            .badge-not-started {
+                                background-color: red !important;
+                            }
+
+                            .badge-in-progress {
+                                background-color: yellow !important;
+                            }
+
+                            .badge-finished {
+                                background-color: green;
+                            }
+                        }
+
+                        .list-item-title-not-started,
+                        .list-item-title-in-progress {
+                            width: 80%;
+                            word-wrap: break-word;
+                            cursor: pointer;
+                        }
+
+                        .list-item-title-finished {
+                            width: 80%;
+                            word-wrap: break-word;
+
+                            p {
+                                text-decoration: line-through;
+                            }
+                        }
+
+                        .action-icons {
+                            width: 15%;
+                            display: flex;
+                            flex-direction: column;
+
+                            svg {
+                                margin: 8px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

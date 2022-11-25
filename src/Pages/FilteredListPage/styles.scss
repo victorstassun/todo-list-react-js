@@ -1,0 +1,79 @@
+.list-filtered-items {
+    width: 1042px !important;
+    height: 70%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+    padding: 20px;
+
+    .page-title {
+        width: 100%;
+
+        h1 {
+            color: #fff;
+        }
+
+        &::after {
+            content: '';
+            width: 96%;
+            margin-top: -12px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+        }
+    }
+
+    .cards-container {
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+    
+        .card {
+            width: 260px;
+            height: 120px;
+            background-color: #fff;
+            border-radius: 6px;
+            margin: 20px;
+            display: flex;
+
+            .badge-container {
+                width: 5%;
+
+                .status {
+                    width: 6px;
+                    height: 100%;
+                    border-radius: 4px 0 0 4px;
+                }
+        
+                .badge-not-started {
+                    background-color: red;
+                }
+        
+                .badge-in-progress {
+                    background-color: yellow;
+                }
+        
+                .badge-finished {
+                    background-color: green;
+                }
+            }
+
+            .info-container {
+                width: 85%;
+
+                p {
+                    margin-top: -12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.actions-bar {
+    width: 1042px;
+    padding: 0 20px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(82, 82, 82, 0.767);
+    margin-top: 60px;
+    border-radius: 12px;
+
+    .add-new-item {
+        width: 150px;
+        height: 30px;
+        background-color: rgb(189, 189, 189);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .filters {
+        display: flex;
+        
+        h3 {
+            color: rgb(189, 189, 189);
+            margin-right: -28px;
+        }
+    }
+
+    .filters-list {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            margin: 0 12px;
+            list-style: none;
+
+            a {
+                width: 160px;
+                height: 30px;
+                background-color: rgb(189, 189, 189);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                text-decoration:none;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: 700;
+
+                &:visited, &:link {
+                    color: #000;
+                }
+
+                &:focus {
+                    background-color: rgb(41, 41, 41);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

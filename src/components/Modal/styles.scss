@@ -1,0 +1,136 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+
+    .modal {
+        width: 640px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+        background-color: #fff; 
+
+        .modal-infos {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+
+            .modal-title{
+                margin-left: 40px;
+            }
+
+            .description {
+                width: 380px;
+                max-height: 380px;
+                margin: 20px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: flex-start;
+
+                .description-title {
+                    margin: 0;
+                    font-weight: 500;
+                }
+
+                .description-text {
+                    width: 100%;
+                    word-wrap: break-word;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 360px;
+                position: absolute;
+                background-color: rgba(122, 122, 122, 0.212);
+                margin: 20px 0 0 430px;
+            }
+        }
+
+        .modal-actions {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+
+            .close-option {
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin: 12px 12px;
+                }
+            }
+
+            .status-indicator {
+                display: flex;
+                flex-direction: column;
+
+                h3, p {
+                    width: 120px;
+                    margin: 12px 0 0 16px;
+                    padding: 0;
+                }
+
+
+            }
+
+            .move-card {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin: 190px 0 0 4px;
+                cursor: pointer;
+                color: rgb(88, 133, 255);
+                
+                svg {
+                    margin: 0;
+                }
+                 
+                p {
+                    font-weight: 500;
+                    margin: 0;
+                    margin-left: 4px;
+                }
+            }
+
+            .delete-card {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin: 12px 0 0 4px;
+                cursor: pointer;
+                color: red;
+
+                svg {
+                    margin: 0;
+                }
+
+                p {
+                    font-weight: 500;
+                    margin: 0;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
