@@ -43,9 +43,9 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={<Home class="pages-content" addListItem={addListItem} deleteListItem={deleteListItem} listItems={listItems} setListItems={setListItems} />} /> 
-            <Route path="/not-started" element={<FilteredListPage class="pages-content" filteredItems={notStartedItems} status={"Not started"} />} />
-            <Route path="/in-progress" element={<FilteredListPage class="pages-content" filteredItems={inProgressItems} status={"In progress"} />} />
-            <Route path="/finished" element={<FilteredListPage class="pages-content" filteredItems={finishedItems} status={"Finished"} />} />
+            <Route path="/not-started" element={<FilteredListPage class="pages-content" filteredItems={notStartedItems} status={"Not started"} deleteListItem={deleteListItem} />} />
+            <Route path="/in-progress" element={<FilteredListPage class="pages-content" filteredItems={inProgressItems} status={"In progress"} deleteListItem={deleteListItem} />} />
+            <Route path="/finished" element={<FilteredListPage class="pages-content" filteredItems={finishedItems} status={"Finished"} deleteListItem={deleteListItem} />} />
           </Routes>
         </div>
         </Router>
